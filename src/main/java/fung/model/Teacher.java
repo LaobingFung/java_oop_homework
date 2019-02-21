@@ -22,6 +22,11 @@ public class Teacher extends Person {
         System.out.println(strOut);
     }
 
+    public void assignLeaderInformed(Student stu) {
+        String strOut = "I am " + getName() + ". I know" + stu.getName() + "become Leader of Class " + stu.getKlass().getNumber() + ".";
+        System.out.println(strOut);
+    }
+
     @Override
     public String introduce() {
         String introStr = null;

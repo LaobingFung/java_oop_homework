@@ -20,6 +20,11 @@ public class Klass {
     public void assignLeader(Student stu) {
         if (isIn(stu)) {
             this.leader = stu;
+            try {
+                this.teacher.assignLeaderInformed(stu);
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
         } else {
             System.out.println("It is not one of us");
         }
