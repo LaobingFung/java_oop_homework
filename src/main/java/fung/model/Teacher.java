@@ -8,6 +8,15 @@ public class Teacher extends Person {
         this.klasses = klasses;
     }
 
+    public boolean isTeaching(Student stu) {
+        for (Klass klass: klasses) {
+            if (klass.isIn(stu)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public String introduce() {
         String introStr = null;
