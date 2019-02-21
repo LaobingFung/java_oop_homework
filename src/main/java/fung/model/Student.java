@@ -10,7 +10,12 @@ public class Student extends Person {
 
     @Override
     public String introduce() {
-        String introStr = this.klass.getLeader().getId() == super.getId()? ("I am Leader of Class " + this.klass.getNumber() + ".") : ("I am at Class " + this.klass.getNumber() + ".");
+        String introStr = null;
+        try {
+            introStr = this.klass.getLeader().getId() == super.getId()? ("I am Leader of Class " + this.klass.getNumber() + ".") : ("I am at Class " + this.klass.getNumber() + ".");
+        } catch (NullPointerException e) {
+            introStr = "I am at Class " + this.klass.getNumber() + ".";
+        }
         return super.introduce() + introStr;
     }
 }
