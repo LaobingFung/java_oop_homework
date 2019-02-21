@@ -17,6 +17,14 @@ public class Klass {
     }
 
     public void assignLeader(Student stu) {
-        this.leader = stu;
+        if (stu.getKlass().equals(this)) {
+            this.leader = stu;
+        } else {
+            System.out.println("It is not one of us");
+        }
+    }
+
+    public void appendMember(Student stu) {
+        stu.setKlass(this);
     }
 }

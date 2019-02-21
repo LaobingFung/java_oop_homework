@@ -5,8 +5,9 @@ import main.java.fung.model.Student;
 public class Main {
     public static void main(String[] args) {
         Klass klass2 = new Klass(2);
+        Klass klass1 = new Klass(1);
         Student tom = new Student(20190101, "Tom", 21, klass2);
-        klass2.assignLeader(tom);
+        klass1.assignLeader(tom);
         System.out.println(tom.introduce());
     }
 }
