@@ -15,4 +15,8 @@ public class Klass {
     public Student getLeader() {
         return this.leader;
     }
+
+    public void assignLeader(Student stu) {
+        this.leader = stu;
+    }
 }
