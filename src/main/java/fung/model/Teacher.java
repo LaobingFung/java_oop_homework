@@ -17,6 +17,11 @@ public class Teacher extends Person {
         return false;
     }
 
+    public void appendInformed(Student stu) {
+        String strOut = "I am " + getName() + ". I know" + stu.getName() + "has joined Class " + stu.getKlass().getNumber() + ".";
+        System.out.println(strOut);
+    }
+
     @Override
     public String introduce() {
         String introStr = null;
